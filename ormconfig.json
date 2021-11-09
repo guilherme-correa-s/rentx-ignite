@@ -5,7 +5,7 @@
     "username": "docker",
     "password": "alterarSenha",
     "database": "rentx",
-    "migrations": ["./src/database/migratios/*.ts"],
+    "migrations": ["./src/database/migrations/*.ts"],
     "entities": ["./src/modules/**/entities/*.ts"],
     "cli": {
         "migrationsDir": "./src/database/migrations"
