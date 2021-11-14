@@ -22,6 +22,6 @@ export class CreateSpecificationUseCase {
     if (specificationAlreadyExists)
       throw new AppError('Specification Already Exists!');
 
-    this.specificationsRepository.create({ name, description });
+    await this.specificationsRepository.create({ name, description });
   }
 }
