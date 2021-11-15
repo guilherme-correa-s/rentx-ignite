@@ -2,7 +2,7 @@ import { hash } from 'bcrypt';
 import { v4 as uuidV4 } from 'uuid';
 
 import { ICreateUserDTO } from '../../dtos/ICreateUserDTO';
-import { User } from '../../entities/User';
+import { User } from '../../infra/typeorm/entities/User';
 import { IUsersRepository } from '../IUsersRepository';
 
 export class UserRepositoryInMemory implements IUsersRepository {
