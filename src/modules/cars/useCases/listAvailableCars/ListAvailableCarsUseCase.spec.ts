@@ -1,20 +1,20 @@
 import { ICreateCarDTO } from '../../dtos/ICreateCarDTO';
 import { CarsRepositoryInMemory } from '../../repositories/in-memory/CarsRepositoryInMemory';
 import { CreateCarUseCase } from '../createCar/CreateCarUseCase';
-import { ListCarsUseCase } from './ListavailableCarsUseCase';
+import { ListAvailableCarsUseCase } from './ListavailableCarsUseCase';
 
 let carsRepositoryInMemory: CarsRepositoryInMemory;
-let listCarsUseCase: ListCarsUseCase;
+let listCarsUseCase: ListAvailableCarsUseCase;
 let createCarUseCase: CreateCarUseCase;
 
 describe('List Cars', () => {
   beforeEach(() => {
     carsRepositoryInMemory = new CarsRepositoryInMemory();
-    listCarsUseCase = new ListCarsUseCase(carsRepositoryInMemory);
+    listCarsUseCase = new ListAvailableCarsUseCase(carsRepositoryInMemory);
     createCarUseCase = new CreateCarUseCase(carsRepositoryInMemory);
   });
 
-  it('should be list car is available', async () => {
+  it('should be able to list all available cars', async () => {
     const car: ICreateCarDTO = {
       name: 'carro test 1',
       description: 'description test',
